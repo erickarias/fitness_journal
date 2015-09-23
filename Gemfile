@@ -13,5 +13,11 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'jquery-rails'
 
+gem 'haml'
+
+gem 'devise'
+
+gem 'turbolinks'
+
 gem 'spring',        group: :development
 
