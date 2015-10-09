@@ -1,9 +1,8 @@
 class MealsController < ApplicationController
   before_action :set_meal, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @meals = Meal.all
+    @meals = Meal.all.order("created_at DESC")
   end
 
   def show
