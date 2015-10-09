@@ -21,3 +21,4 @@ gem 'turbolinks'
 
 gem 'spring',        group: :development
 
+gem 'awesome_print'
