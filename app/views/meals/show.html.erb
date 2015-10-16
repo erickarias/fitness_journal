@@ -10,5 +10,10 @@
   <%= @meal.description %>
 </p>
 
+<h2>Meal Items</h2>
+<%= @meal.meal_items %>
+<h3>Add a meal item</h2>
+<%= render "meal_items/form" %>
+
 <%= link_to 'Edit', edit_meal_path(@meal) %> |
 <%= link_to 'Back', meals_path %>

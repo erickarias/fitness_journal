@@ -6,6 +6,7 @@ class MealsController < ApplicationController
   end
 
   def show
+    @meal_item = MealItem.new
   end
 
   def new

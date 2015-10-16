@@ -1,0 +1,26 @@
+<%= form_for([@meal, @meal_item]) do |f| %>
+  <% if @meal_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@meal_item.errors.count, "error") %> prohibited this meal from being saved:</h2>
+
+      <ul>
+      <% @meal_item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= f.label :food_item %><br>
+    <%= f.select(:food_item_id, FoodItem.all.map {|food_item| [food_item.name, food_item.id]} ,{prompt: 'Select a Food Item'}) %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :servings %><br>
+    <%= f.text_field :servings %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
